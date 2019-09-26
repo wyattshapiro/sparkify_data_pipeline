@@ -3,3 +3,5 @@
 *.DS_Store
 venv/
 *.cfg
+airflow.db
+logs/
