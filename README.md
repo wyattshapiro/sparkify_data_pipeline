@@ -109,25 +109,27 @@ I use AWS S3 and Redshift for data storage and processing.
 
 See https://aws.amazon.com/ for more information.
 
+----
+
+I use Apache Airflow to orchestrate and schedule tasks.
+
+There are several main directories for Airflow:
+- dags/: contains all DAGs (Directed Acyclic Graph)
+- plugins/: contains all customizable code that can be leveraged by DAGs
+- logs/: contains all log files that track code execution
+
+See https://airflow.apache.org/ for more information.
+
 
 ## Usage
-
-There are several main scripts:
-
--
-
 
 **Steps to run**
 1. Navigate to top of project directory
 2. Create virtualenv (see Dependencies)
 3. Activate virtualenv (see Dependencies)
 4. Install requirements (see Dependencies)
-5. Configure ... for AWS
-6. $ python3 ...
-
-
-## Future Optimizations
-
-- Add genre data to song table
-- Add data quality checks
-- Create a dashboard for analytic queries
+5. Start up Redshift cluster
+6. $ airflow webserver
+7. $ airflow scheduler
+8. Configure Airflow connections to AWS and Redshift cluster
+9. Trigger DAG in Airflow UI
