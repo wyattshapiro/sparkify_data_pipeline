@@ -15,10 +15,10 @@ class StageToRedshiftOperator(BaseOperator):
 
     @apply_defaults
     def __init__(self,
-                 redshift_conn_id="",
-                 aws_credentials_id="",
-                 s3_path_json="",
-                 redshift_target_table = "",
+                 redshift_conn_id,
+                 aws_credentials_id,
+                 s3_path_json,
+                 redshift_target_table,
                  s3_path_schema="auto",
                  *args, **kwargs):
 
