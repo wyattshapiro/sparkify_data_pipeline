@@ -132,4 +132,4 @@ See https://airflow.apache.org/ for more information.
 6. $ airflow webserver
 7. $ airflow scheduler
 8. Configure Airflow connections to AWS and Redshift cluster
-9. Trigger DAG in Airflow UI
+9. Turn on and Trigger DAG in Airflow UI
